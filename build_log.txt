@@ -1,0 +1,70 @@
+﻿
+> youtubemoneycalculator@1.0.0 build
+> next build
+
+node.exe :  ΓÜá Warning: Next.
+js inferred your workspace roo
+t, but it may not be correct.
+At F:\SERPBEAR\Node JS\npm.ps1
+:29 char:3
++   & $NODE_EXE $NPM_CLI_JS $a
+rgs
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo          : 
+    NotSpecified: ( ΓÜá Warn  
+  ing: N...not be correct.:   
+ String) [], RemoteExcepti    
+on
+    + FullyQualifiedErrorId : 
+    NativeCommandError
+ 
+ We detected multiple lockfile
+s and selected the directory o
+f C:\Users\alpus\package-lock.
+json as the root directory.
+ To silence this warning, set 
+`outputFileTracingRoot` in you
+r Next.js config, or consider 
+removing one of the lockfiles 
+if it's not needed.
+   See https://nextjs.org/docs
+/app/api-reference/config/next
+-config-js/output#caveats for 
+more information.
+ Detected additional lockfiles
+: 
+   * C:\Users\alpus\Documents\
+Project_Next.js\Project\youtub
+emoneycalculator\package-lock.
+json
+
+   Γû▓ Next.js 15.5.12
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully in 21.5s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/8) ...
+   Generating static pages (2/8) 
+   Generating static pages (4/8) 
+   Generating static pages (6/8) 
+ Γ£ô Generating static pages (8/8)
+   Finalizing page optimization ...
+   Collecting build traces ...
+[Error: ENOENT: no such file o
+r directory, open 'C:\Users\al
+pus\Documents\Project_Next.js\
+Project\youtubemoneycalculator
+\.next\server\app\_not-found\p
+age.js.nft.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\alpus\\Doc
+uments\\Project_Next.js\\Proje
+ct\\youtubemoneycalculator\\.n
+ext\\server\\app\\_not-found\\
+page.js.nft.json'
+}

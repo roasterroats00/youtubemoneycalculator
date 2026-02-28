@@ -1,0 +1,25 @@
+section class=max-w-[1180px] lgmx-auto mdpy-28 py-16 space-y-12 mx-2divh2 class=text-secondary text-center capitalize text-4xl font-semiboldCalculate YouTube revenue Channel, video, or views – we've got you covered!h2div class=flex flex-col items-center justify-center gap-2divdivdiv class=grid grid-cols-1 mdgrid-cols-3  lggap-x-5 mdgap-x-3 mdgap-y-12 gap-4 mdpx-0 px-2div class=relative p-5 rounded-3xl space-y-5 
+                    border border-[#D4D6D9]
+                    false
+                    false
+                    div class=
+                      bg-[#FF872A] bg-opacity-10 w-fit p-5 rounded-full mb-7
+                      false
+                      false
+                    svg xmlns=httpwww.w3.org2000svg width=24 height=24 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class=lucide lucide-at-signcircle cx=12 cy=12 r=4circlepath d=M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8pathsvgdivdiv class=space-y-2h2 class=text-secondary text-2xl font-semibold1. !-- --Channel URL or @usernameh2p class=text-tertiaryJust paste the channel's URL or their @username (e.g., youtube.comcChannelName or @ChannelName) to get estimated earnings, subscriber stats, and more.pdivdivdiv class=relative p-5 rounded-3xl space-y-5 
+                    border border-[#D4D6D9]
+                    false
+                    false
+                    div class=
+                      bg-[#52A1FB] bg-opacity-10 w-fit p-5 rounded-full mb-7
+                      false
+                      false
+                    svg xmlns=httpwww.w3.org2000svg width=24 height=24 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class=lucide lucide-linkpath d=M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71pathpath d=M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71pathsvgdivdiv class=space-y-2h2 class=text-secondary text-2xl font-semibold2. !-- --Video URLh2p class=text-tertiaryPaste the video's URL to quickly estimate its revenue potential, view count impact, and other key metrics.pdivdivdiv class=relative p-5 rounded-3xl space-y-5 
+                    border border-[#D4D6D9]
+                    false
+                    false
+                    div class=
+                      bg-[#9C5FF2] bg-opacity-10 w-fit p-5 rounded-full mb-7
+                      false
+                      false
+                    svg xmlns=httpwww.w3.org2000svg width=24 height=24 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class=lucide lucide-calculatorrect width=16 height=20 x=4 y=2 rx=2rectline x1=8 x2=16 y1=6 y2=6lineline x1=16 x2=16 y1=14 y2=18linepath d=M16 10h.01pathpath d=M12 10h.01pathpath d=M8 10h.01pathpath d=M12 14h.01pathpath d=M8 14h.01pathpath d=M12 18h.01pathpath d=M8 18h.01pathsvgdivdiv class=space-y-2h2 class=text-secondary text-2xl font-semibold3. !-- --Calculate by Viewsh2p class=text-tertiary Use this calculator to estimate potential earnings based on a specific number of views and CPM.pdivdivdivsection
