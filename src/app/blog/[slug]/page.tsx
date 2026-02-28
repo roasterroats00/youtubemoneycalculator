@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             images: [{ url: "/upload/blog/top-youtuber-revenue-2026.png", width: 1200, height: 630 }],
         },
         alternates: {
-            canonical: `https://youtubemoneycalculator.com/blog/${slug}`,
+            canonical: `https://youtubemoneycalculator.net/blog/${slug}`,
         },
     };
 }
@@ -101,7 +101,7 @@ export default async function YouTuberPage({ params }: { params: Promise<{ slug:
         "@type": "Article",
         headline: `How Much Does ${yt.name} Make on YouTube? (2026 Revenue)`,
         description: `${yt.name} earns an estimated ${rev.fmtMonthly} per month on YouTube.`,
-        image: "https://youtubemoneycalculator.com/upload/blog/top-youtuber-revenue-2026.png",
+        image: "https://youtubemoneycalculator.net/upload/blog/top-youtuber-revenue-2026.png",
         author: { "@type": "Organization", name: "YouTube Money Calculator" },
         publisher: { "@type": "Organization", name: "YouTube Money Calculator" },
         datePublished: "2026-02-28",

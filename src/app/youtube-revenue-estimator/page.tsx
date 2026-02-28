@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         type: "website",
     },
     alternates: {
-        canonical: "https://youtubemoneycalculator.com/youtube-revenue-estimator",
+        canonical: "https://youtubemoneycalculator.net/youtube-revenue-estimator",
     },
 };
 

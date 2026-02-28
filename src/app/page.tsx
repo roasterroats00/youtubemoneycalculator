@@ -25,7 +25,7 @@ const structuredData = {
     "priceCurrency": "USD",
   },
   "featureList": "YouTube earnings calculator, CPM calculator, RPM calculator, Channel analyzer, Sponsor value estimator, Revenue projections",
-  "screenshot": "https://youtubemoneycalculator.com/upload/youtubemoneycalculator.net.png",
+  "screenshot": "https://youtubemoneycalculator.net/upload/youtubemoneycalculator.net.png",
 };
 
 const faqData = {

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { youtubers } from "@/data/youtubers";
 
-const BASE_URL = "https://youtubemoneycalculator.com";
+const BASE_URL = "https://youtubemoneycalculator.net";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const now = new Date().toISOString();

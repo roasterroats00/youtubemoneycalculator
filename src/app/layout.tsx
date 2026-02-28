@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://youtubemoneycalculator.com"),
+  metadataBase: new URL("https://youtubemoneycalculator.net"),
   title: {
     default: "YouTube Money Calculator - Estimate Earnings & Revenue 2026",
     template: "%s | YouTube Money Calculator",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://youtubemoneycalculator.com",
+    url: "https://youtubemoneycalculator.net",
     siteName: "YouTube Money Calculator",
     title: "YouTube Money Calculator - Estimate Earnings & Revenue 2026",
     description: "Free YouTube Money Calculator with AI-powered revenue estimates. Calculate earnings by views, CPM, or channel URL.",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://youtubemoneycalculator.com",
+    canonical: "https://youtubemoneycalculator.net",
   },
 };
 

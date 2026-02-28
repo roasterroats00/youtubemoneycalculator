@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         description: "How much do the world's biggest artists earn from YouTube?",
     },
     alternates: {
-        canonical: "https://youtubemoneycalculator.com/blog/top-artist-youtube-earnings",
+        canonical: "https://youtubemoneycalculator.net/blog/top-artist-youtube-earnings",
     },
 };
 
@@ -47,11 +47,11 @@ const articleSchema = {
     publisher: {
         "@type": "Organization",
         name: "YouTube Money Calculator",
-        logo: { "@type": "ImageObject", url: "https://youtubemoneycalculator.com/upload/youtubemoneycalculator.net.png" },
+        logo: { "@type": "ImageObject", url: "https://youtubemoneycalculator.net/upload/youtubemoneycalculator.net.png" },
     },
     datePublished: "2026-02-28",
     dateModified: "2026-02-28",
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://youtubemoneycalculator.com/blog/top-artist-youtube-earnings" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://youtubemoneycalculator.net/blog/top-artist-youtube-earnings" },
 };
 
 // Genre aggregation for analysis section

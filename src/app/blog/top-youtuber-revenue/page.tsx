@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         images: ["/upload/blog/top-youtuber-revenue-2026.png"],
     },
     alternates: {
-        canonical: "https://youtubemoneycalculator.com/blog/top-youtuber-revenue",
+        canonical: "https://youtubemoneycalculator.net/blog/top-youtuber-revenue",
     },
 };
 
@@ -54,7 +54,7 @@ const articleStructuredData = {
     headline: "Top 20 Highest-Paid YouTubers 2026 – Revenue, Earnings & Net Worth",
     description:
         "Discover the highest-paid YouTubers in 2026 with a complete revenue breakdown including ad earnings, sponsorships, and merchandise income.",
-    image: "https://youtubemoneycalculator.com/upload/blog/top-youtuber-revenue-2026.png",
+    image: "https://youtubemoneycalculator.net/upload/blog/top-youtuber-revenue-2026.png",
     author: {
         "@type": "Organization",
         name: "YouTube Money Calculator",
@@ -64,14 +64,14 @@ const articleStructuredData = {
         name: "YouTube Money Calculator",
         logo: {
             "@type": "ImageObject",
-            url: "https://youtubemoneycalculator.com/upload/youtubemoneycalculator.net.png",
+            url: "https://youtubemoneycalculator.net/upload/youtubemoneycalculator.net.png",
         },
     },
     datePublished: "2026-02-28",
     dateModified: "2026-02-28",
     mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://youtubemoneycalculator.com/blog/top-youtuber-revenue",
+        "@id": "https://youtubemoneycalculator.net/blog/top-youtuber-revenue",
     },
 };
 

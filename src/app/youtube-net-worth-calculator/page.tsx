@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         type: "website",
     },
     alternates: {
-        canonical: "https://youtubemoneycalculator.com/youtube-net-worth-calculator",
+        canonical: "https://youtubemoneycalculator.net/youtube-net-worth-calculator",
     },
 };
 
