@@ -505,7 +505,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Country-Specific Earnings</h2>
 
-            <h3 className="text-2xl font-semibold mb-4">Top 10 Countries with Highest YouTube CPM (2025)</h3>
+            <h3 className="text-2xl font-semibold mb-4">Top 10 Countries with Highest YouTube CPM (2026)</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>

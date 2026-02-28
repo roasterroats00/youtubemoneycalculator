@@ -386,7 +386,7 @@ export default function TopYoutuberRevenuePage() {
                             </p>
                             <p>
                                 But MrBeast&apos;s real financial empire extends far beyond YouTube. His snack brand
-                                <strong className="text-foreground"> Feastables surpassed $700M in annual revenue</strong> in 2025,
+                                <strong className="text-foreground"> Feastables surpassed $700M in annual revenue</strong> in 2026,
                                 his burger chain MrBeast Burger operates in thousands of locations, and his production company
                                 is valued at over $1.5 billion.
                             </p>
