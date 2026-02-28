@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Flag } from "@/components/Flag";
+import { Schema, SchemaFactory } from "@/components/Schema";
 import { CalendarDays, Clock, TrendingUp, DollarSign, Users, BarChart3, Star, ArrowRight, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -99,13 +100,16 @@ const topYoutubers = [
 ];
 
 export default function TopYoutuberRevenuePage() {
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Blog", item: "/blog" },
+        { name: "Top 20 Highest-Paid YouTubers 2026", item: "/blog/top-youtuber-revenue" },
+    ]);
+
     return (
         <div className="min-h-screen bg-background text-foreground">
-            {/* Structured Data */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
-            />
+            <Schema data={articleStructuredData} />
+            <Schema data={breadcrumbData} />
 
             {/* Background ambience */}
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">

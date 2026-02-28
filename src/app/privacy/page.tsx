@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Lock, Eye, Shield, Database, Bell } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
     title: "Privacy Policy - YouTube Money Calculator",
@@ -46,8 +47,14 @@ function SectionIcon({ type }: { type: string }) {
 }
 
 export default function PrivacyPage() {
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Privacy Policy", item: "/privacy" },
+    ]);
+
     return (
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+            <Schema data={breadcrumbData} />
             <Header />
 
             <main className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">

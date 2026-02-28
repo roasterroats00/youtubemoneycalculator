@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactClient from "@/components/ContactClient";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
     title: "Contact Us - YouTube Money Calculator",
@@ -12,5 +13,23 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-    return <ContactClient />;
+    const contactPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "description": "Reach out to us for support or business inquiries.",
+        "publisher": { "@id": "https://youtubemoneycalculator.net/#organization" }
+    };
+
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Contact Us", item: "/contact" },
+    ]);
+
+    return (
+        <>
+            <Schema data={contactPageSchema} />
+            <Schema data={breadcrumbData} />
+            <ContactClient />
+        </>
+    );
 }

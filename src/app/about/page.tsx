@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Heart, Zap, Award, Globe } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
     title: "About Us - YouTube Money Calculator AI Revenue Platform",
@@ -15,9 +16,24 @@ export const metadata: Metadata = {
     },
 };
 
+const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+        "@id": "https://youtubemoneycalculator.net/#organization"
+    }
+};
+
+const breadcrumbData = SchemaFactory.breadcrumb([
+    { name: "Home", item: "/" },
+    { name: "About Us", item: "/about" },
+]);
+
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+            <Schema data={aboutPageSchema} />
+            <Schema data={breadcrumbData} />
             {/* Dynamic Background */}
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />

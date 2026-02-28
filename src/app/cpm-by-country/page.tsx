@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Globe, TrendingUp, DollarSign, Zap } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "YouTube CPM Rates by Country 2026 - Highest Paying Countries",
@@ -47,8 +48,14 @@ const medalColors: Record<number, string> = {
 };
 
 export default function CPMByCountryPage() {
+  const breadcrumbData = SchemaFactory.breadcrumb([
+    { name: "Home", item: "/" },
+    { name: "CPM by Country", item: "/cpm-by-country" },
+  ]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Schema data={breadcrumbData} />
       {/* Ambient Background */}
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[-10%] right-[-15%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[150px]" />

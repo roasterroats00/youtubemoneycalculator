@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 import { Flag } from "@/components/Flag";
 import { youtubers, getEstimatedRevenue } from "@/data/youtubers";
 import { TrendingUp, Search, DollarSign } from "lucide-react";
@@ -18,8 +19,14 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndex() {
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Blog", item: "/blog" },
+    ]);
+
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <Schema data={breadcrumbData} />
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />

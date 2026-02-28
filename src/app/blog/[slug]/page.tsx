@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Flag } from "@/components/Flag";
+import { Schema, SchemaFactory } from "@/components/Schema";
 import { youtubers, getYoutuberBySlug, getEstimatedRevenue } from "@/data/youtubers";
 import { DollarSign, Users, BarChart3, TrendingUp, Globe, CalendarDays, Clock, ArrowRight, ChevronRight, Star } from "lucide-react";
 
@@ -108,9 +109,16 @@ export default async function YouTuberPage({ params }: { params: Promise<{ slug:
         dateModified: "2026-02-28",
     };
 
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Blog", item: "/blog" },
+        { name: yt.name, item: `/blog/${yt.slug}` },
+    ]);
+
     return (
         <div className="min-h-screen bg-background text-foreground">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <Schema data={articleSchema} />
+            <Schema data={breadcrumbData} />
 
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />

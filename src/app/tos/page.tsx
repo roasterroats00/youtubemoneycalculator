@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Shield, FileText, Scale, Lock, Globe } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
     title: "Terms of Service - YouTube Money Calculator",
@@ -52,8 +53,14 @@ function SectionIcon({ type }: { type: string }) {
 }
 
 export default function TOSPage() {
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Terms of Service", item: "/tos" },
+    ]);
+
     return (
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+            <Schema data={breadcrumbData} />
             {/* Background */}
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] bg-primary/2 rounded-full blur-[150px]" />

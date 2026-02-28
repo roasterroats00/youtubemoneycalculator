@@ -3,6 +3,7 @@ import Link from "next/link";
 import { HelpCircle, Zap, ChevronRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "YouTube Earnings FAQ - Frequently Asked Questions 2026",
@@ -92,8 +93,28 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function FAQPage() {
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
+      }
+    }))
+  };
+
+  const breadcrumbData = SchemaFactory.breadcrumb([
+    { name: "Home", item: "/" },
+    { name: "FAQ", item: "/faq" },
+  ]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Schema data={faqPageSchema} />
+      <Schema data={breadcrumbData} />
       {/* Background */}
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />

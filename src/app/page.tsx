@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Calculator, BarChart3, DollarSign, Zap, Shield, TrendingUp, Users, Video, Globe, Lightbulb, Youtube, Twitter, Instagram, Linkedin, Github, Mail, ChevronRight, AtSign, Link as LinkIcon, Calculator as CalculatorIcon } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 type Tab = "calculator" | "analyzer";
 
@@ -126,15 +127,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
+      {/* SEO Structured Data */}
+      <Schema data={SchemaFactory.organization()} />
+      <Schema data={SchemaFactory.website()} />
+      <Schema data={structuredData} />
+      <Schema data={faqData} />
+
       <Header />
 
       {/* Hero Section */}

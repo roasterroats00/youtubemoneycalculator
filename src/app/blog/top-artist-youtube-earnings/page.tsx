@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Flag } from "@/components/Flag";
 import { CalendarDays, Clock, TrendingUp, DollarSign, Users, BarChart3, Star, ArrowRight, ChevronRight, Music, Globe, Mic2 } from "lucide-react";
 import { artists } from "./data";
+import { Schema, SchemaFactory } from "@/components/Schema";
 
 export const metadata: Metadata = {
     title: "Top 100 Music Artists YouTube Earnings 2026 – Revenue & Income Report",
@@ -78,9 +79,16 @@ export default function TopArtistYouTubeEarningsPage() {
     const top10 = artists.slice(0, 10);
     const top50 = artists.slice(0, 50);
 
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "Blog", item: "/blog" },
+        { name: "Top Artist YouTube Earnings 2026", item: "/blog/top-artist-youtube-earnings" },
+    ]);
+
     return (
         <div className="min-h-screen bg-background text-foreground">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <Schema data={articleSchema} />
+            <Schema data={breadcrumbData} />
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />

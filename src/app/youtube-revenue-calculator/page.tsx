@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Schema, SchemaFactory } from "@/components/Schema";
 import RevenueCalculatorClient from "./RevenueCalculatorClient";
 
 export const metadata: Metadata = {
@@ -84,12 +85,22 @@ const faqSchema = {
 };
 
 export default function YouTubeRevenueCalculatorPage() {
+    const breadcrumbData = SchemaFactory.breadcrumb([
+        { name: "Home", item: "/" },
+        { name: "YouTube Revenue Calculator", item: "/youtube-revenue-calculator" },
+    ]);
+
+    const appSchema = SchemaFactory.softwareApplication(
+        "YouTube Revenue Calculator",
+        "Calculate your YouTube earnings based on views and RPM.",
+        "/youtube-revenue-calculator"
+    );
+
     return (
         <div className="min-h-screen bg-background text-foreground">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
+            <Schema data={faqSchema} />
+            <Schema data={breadcrumbData} />
+            <Schema data={appSchema} />
             <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px]" />
