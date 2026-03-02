@@ -96,7 +96,7 @@ export function Footer() {
                 <div className="container mx-auto px-4 py-8">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="text-xs text-muted-foreground font-bold">
-                            &copy; {new Date().getFullYear()} YouTube Money Calculator. All rights reserved. <span className="text-primary/40 mx-2">|</span> DESIGNED BY ANTIGRAVITY
+                            &copy; {new Date().getFullYear()} YouTube Money Calculator. All rights reserved. <span className="text-primary/40 mx-2">|</span> X BW
                         </div>
                         <div className="flex items-center gap-8 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
                             <Link href="/tos" className="hover:text-primary transition-colors focus:outline-none">Protocol</Link>
