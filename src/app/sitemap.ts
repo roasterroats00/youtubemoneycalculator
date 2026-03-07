@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { youtubers } from "@/data/youtubers";
+import { countries } from "@/data/countries";
 
 const BASE_URL = "https://youtubemoneycalculator.net";
 
@@ -144,5 +145,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
     }));
 
-    return [...staticPages, ...pseoPages];
+    // pSEO country pages
+    const countryPages: MetadataRoute.Sitemap = countries.map((c) => ({
+        url: `${BASE_URL}/cpm/${c.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+    }));
+
+    return [...staticPages, ...pseoPages, ...countryPages];
 }

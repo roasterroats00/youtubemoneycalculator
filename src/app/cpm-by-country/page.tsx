@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Globe, TrendingUp, DollarSign, Zap } from "lucide-react";
+import { Globe, TrendingUp, DollarSign, Zap, ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Schema, SchemaFactory } from "@/components/Schema";
+
+import { countries } from "@/data/countries";
 
 export const metadata: Metadata = {
   title: "YouTube CPM Rates by Country 2026 - Highest Paying Countries",
@@ -22,24 +24,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-
-const countries = [
-  { rank: 1, name: "United States", median: 10.26, min: 7.51, max: 15.76, flag: "🇺🇸" },
-  { rank: 2, name: "Australia", median: 7.67, min: 5.03, max: 13.11, flag: "🇦🇺" },
-  { rank: 3, name: "Norway", median: 7.03, min: 3.00, max: 17.63, flag: "🇳🇴" },
-  { rank: 4, name: "Switzerland", median: 6.89, min: 2.86, max: 19.64, flag: "🇨🇭" },
-  { rank: 5, name: "United Kingdom", median: 6.53, min: 4.53, max: 12.27, flag: "🇬🇧" },
-  { rank: 6, name: "Denmark", median: 6.38, min: 2.60, max: 24.65, flag: "🇩🇰" },
-  { rank: 7, name: "New Zealand", median: 5.77, min: 2.60, max: 20.43, flag: "🇳🇿" },
-  { rank: 8, name: "Canada", median: 5.71, min: 3.53, max: 11.46, flag: "🇨🇦" },
-  { rank: 9, name: "Belgium", median: 5.60, min: 2.67, max: 20.33, flag: "🇧🇪" },
-  { rank: 10, name: "Netherlands", median: 5.54, min: 3.00, max: 18.40, flag: "🇳🇱" },
-  { rank: 11, name: "Sweden", median: 5.45, min: 2.80, max: 18.18, flag: "🇸🇪" },
-  { rank: 12, name: "Finland", median: 5.20, min: 2.50, max: 14.90, flag: "🇫🇮" },
-  { rank: 13, name: "South Korea", median: 5.10, min: 2.40, max: 17.00, flag: "🇰🇷" },
-  { rank: 14, name: "Ireland", median: 5.05, min: 2.30, max: 16.56, flag: "🇮🇪" },
-  { rank: 15, name: "Israel", median: 4.85, min: 2.20, max: 12.81, flag: "🇮🇱" },
-];
 
 const medalColors: Record<number, string> = {
   1: "bg-yellow-400 text-yellow-900",
@@ -138,24 +122,25 @@ export default function CPMByCountryPage() {
                     className={`border-t border-border/30 hover:bg-muted/20 transition-colors group ${index < 3 ? "bg-primary/3" : ""}`}
                   >
                     <td className="py-5 px-8">
-                      <span className={`inline-flex items-center justify-center h-9 w-9 rounded-xl font-black text-sm shadow-sm ${medalColors[country.rank] ?? "bg-muted text-muted-foreground"}`}>
-                        {country.rank}
+                      <span className={`inline-flex items-center justify-center h-9 w-9 rounded-xl font-black text-sm shadow-sm ${medalColors[index + 1] ?? "bg-muted text-muted-foreground"}`}>
+                        {index + 1}
                       </span>
                     </td>
                     <td className="py-5 px-8">
-                      <span className="flex items-center gap-3 font-black text-lg">
+                      <Link href={`/cpm/${country.slug}`} className="flex items-center gap-3 font-black text-lg hover:text-primary transition-all">
                         <span className="text-2xl">{country.flag}</span>
                         {country.name}
-                      </span>
+                        <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                      </Link>
                     </td>
                     <td className="py-5 px-8">
                       <span className="text-2xl font-black text-primary">
-                        ${country.median.toFixed(2)}
+                        ${country.cpmMedian.toFixed(2)}
                       </span>
                     </td>
                     <td className="py-5 px-8 text-muted-foreground font-bold">
                       <span className="bg-muted/40 px-3 py-1 rounded-full text-sm">
-                        ${country.min.toFixed(2)} – ${country.max.toFixed(2)}
+                        ${country.cpmMin.toFixed(2)} – ${country.cpmMax.toFixed(2)}
                       </span>
                     </td>
                   </tr>

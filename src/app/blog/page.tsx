@@ -5,7 +5,8 @@ import { Footer } from "@/components/Footer";
 import { Schema, SchemaFactory } from "@/components/Schema";
 import { Flag } from "@/components/Flag";
 import { youtubers, getEstimatedRevenue } from "@/data/youtubers";
-import { TrendingUp, Search, DollarSign } from "lucide-react";
+import { countries } from "@/data/countries";
+import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "YouTube Earnings Blog – Revenue Reports & Creator Income Analysis",
@@ -118,6 +119,39 @@ export default function BlogIndex() {
                         ))}
                     </div>
                 </div>
+
+                {/* Global CPM Guides Section — [pSEO Theme 1] */}
+                <section className="mb-20">
+                    <div className="flex items-center gap-3 mb-8">
+                        <Globe className="h-6 w-6 text-primary" />
+                        <h2 className="text-xl font-black uppercase tracking-widest">Global YouTube CPM Guides</h2>
+                    </div>
+                    <div className="p-8 rounded-[2.5rem] bg-muted/30 border border-border/50">
+                        <p className="text-sm text-muted-foreground font-medium mb-8 max-w-2xl leading-relaxed">
+                            Explore localized YouTube earnings data for <strong className="text-foreground">60+ countries</strong>.
+                            Our 2026 data-backed guides cover average CPM, RPM estimates, and top-paying niches for creators worldwide.
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            {countries.slice(0, 8).map((country) => (
+                                <Link
+                                    key={country.slug}
+                                    href={`/cpm/${country.slug}`}
+                                    className="px-5 py-3 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all flex items-center gap-3 group"
+                                >
+                                    <span className="text-xl">{country.flag}</span>
+                                    <span className="font-bold text-sm text-foreground group-hover:text-primary transition-colors">{country.name}</span>
+                                    <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                                </Link>
+                            ))}
+                            <Link
+                                href="/cpm-by-country"
+                                className="px-5 py-3 rounded-2xl bg-primary text-white font-black uppercase text-[10px] tracking-widest flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg"
+                            >
+                                View All 60+ Countries <ArrowRight className="h-3 w-3" />
+                            </Link>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Channel Grid */}
                 <h2 className="text-2xl font-black uppercase tracking-tight mb-8">
