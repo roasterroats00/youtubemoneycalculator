@@ -81,6 +81,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         },
         {
+            url: `${BASE_URL}/blog/how-much-youtube-pay-1-million-views`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${BASE_URL}/blog/how-much-do-youtubers-make`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${BASE_URL}/blog/youtube-shorts-pay`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${BASE_URL}/blog/youtube-partner-program-requirements`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
             url: `${BASE_URL}/faq`,
             lastModified: now,
             changeFrequency: "monthly",

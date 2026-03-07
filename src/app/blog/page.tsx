@@ -70,6 +70,55 @@ export default function BlogIndex() {
                     </p>
                 </Link>
 
+                {/* SEO Article Guides */}
+                <div className="mb-16">
+                    <h2 className="text-2xl font-black uppercase tracking-tight mb-8">
+                        YouTube Earnings Guides
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {[
+                            {
+                                title: "How Much YouTube Pays for 1 Million Views in 2026",
+                                desc: "Real CPM data, niche breakdowns, and country comparisons for 1M views.",
+                                href: "/blog/how-much-youtube-pay-1-million-views",
+                                tag: "Revenue Analysis",
+                            },
+                            {
+                                title: "How Much Do YouTubers Actually Make? (2026 Data)",
+                                desc: "Income tiers from nano to mega creators with real earnings data.",
+                                href: "/blog/how-much-do-youtubers-make",
+                                tag: "Income Report",
+                            },
+                            {
+                                title: "YouTube Shorts Pay: RPM Data Inside",
+                                desc: "Shorts monetization model, RPM breakdown, and earning benchmarks.",
+                                href: "/blog/youtube-shorts-pay",
+                                tag: "Shorts Guide",
+                            },
+                            {
+                                title: "YouTube Partner Program 2026: Requirements & Guide",
+                                desc: "New eligibility tiers, application steps, and tips to get monetized.",
+                                href: "/blog/youtube-partner-program-requirements",
+                                tag: "Monetization",
+                            },
+                        ].map((article, i) => (
+                            <Link
+                                key={i}
+                                href={article.href}
+                                className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:-translate-y-1 transition-all group"
+                            >
+                                <span className="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-3">
+                                    {article.tag}
+                                </span>
+                                <h3 className="font-black text-sm mb-2 group-hover:text-primary transition-colors">
+                                    {article.title}
+                                </h3>
+                                <p className="text-xs text-muted-foreground">{article.desc}</p>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Channel Grid */}
                 <h2 className="text-2xl font-black uppercase tracking-tight mb-8">
                     All 100 Channel Revenue Reports
