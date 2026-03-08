@@ -300,7 +300,7 @@ export default function TopYoutuberRevenuePage() {
                                                 </td>
                                                 <td className="py-4 px-6">
                                                     <div>
-                                                        <p className="font-black text-sm"><Flag emoji={yt.country} size={16} /> {yt.name}</p>
+                                                        <p className="font-black text-sm"><span className="text-xl">{yt.country}</span> {yt.name}</p>
                                                         <p className="text-xs text-muted-foreground">{yt.channel}</p>
                                                     </div>
                                                 </td>
@@ -330,7 +330,7 @@ export default function TopYoutuberRevenuePage() {
                                             {yt.rank}
                                         </span>
                                         <div>
-                                            <p className="font-black"><Flag emoji={yt.country} size={18} /> {yt.name}</p>
+                                            <p className="font-black"><span className="text-xl">{yt.country}</span> {yt.name}</p>
                                             <p className="text-xs text-muted-foreground">{yt.subs} subscribers</p>
                                         </div>
                                     </div>

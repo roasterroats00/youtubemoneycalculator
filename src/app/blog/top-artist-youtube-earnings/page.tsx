@@ -188,7 +188,7 @@ export default function TopArtistYouTubeEarningsPage() {
                                         </span>
                                         <div className="flex-1 min-w-0">
                                             <div className="flex flex-wrap items-center gap-2 mb-2">
-                                                <h3 className="font-black text-lg"><Flag emoji={a.flag} size={18} /> {a.name}</h3>
+                                                <h3 className="font-black text-lg"><span className="text-xl">{a.flag}</span> {a.name}</h3>
                                                 <span className="text-xs px-2 py-0.5 rounded-full bg-muted/50 text-muted-foreground font-bold">{a.genre}</span>
                                             </div>
                                             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
@@ -253,7 +253,7 @@ export default function TopArtistYouTubeEarningsPage() {
                                                     <span className={`inline-flex items-center justify-center h-7 w-7 rounded-lg font-black text-xs ${a.rank === 1 ? "bg-yellow-400 text-yellow-900" : a.rank === 2 ? "bg-slate-300 text-slate-700" : a.rank === 3 ? "bg-amber-600 text-amber-100" : "bg-muted/50 text-muted-foreground"}`}>{a.rank}</span>
                                                 </td>
                                                 <td className="py-3 px-4">
-                                                    <p className="font-black text-sm"><Flag emoji={a.flag} size={14} /> {a.name}</p>
+                                                    <p className="font-black text-sm"><span className="text-xl">{a.flag}</span> {a.name}</p>
                                                     <p className="text-xs text-muted-foreground">{a.channel}</p>
                                                 </td>
                                                 <td className="py-3 px-4 font-bold text-xs">{a.subs}</td>

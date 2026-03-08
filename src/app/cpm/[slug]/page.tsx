@@ -106,14 +106,14 @@ export default async function CountryCPMPage({ params }: { params: Promise<{ slu
                                     <Globe className="h-3 w-3" /> {country.continent} Guide
                                 </span>
                                 <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${country.tier === 'premium' ? 'bg-yellow-400/20 border-yellow-400/30 text-yellow-600' :
-                                        country.tier === 'high' ? 'bg-emerald-400/20 border-emerald-400/30 text-emerald-600' :
-                                            'bg-blue-400/20 border-blue-400/30 text-blue-600'
+                                    country.tier === 'high' ? 'bg-emerald-400/20 border-emerald-400/30 text-emerald-600' :
+                                        'bg-blue-400/20 border-blue-400/30 text-blue-600'
                                     } border`}>
                                     <Shield className="h-3 w-3" /> Tier: {country.tier}
                                 </span>
                             </div>
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight uppercase leading-none">
-                                {country.flag} YouTube CPM in <br />
+                                <span className="text-xl">{country.flag}</span> YouTube CPM in <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/60">
                                     {country.name} 2026
                                 </span>

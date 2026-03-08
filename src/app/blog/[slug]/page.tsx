@@ -150,7 +150,7 @@ export default async function YouTuberPage({ params }: { params: Promise<{ slug:
                             Make on YouTube?
                         </h1>
                         <p className="text-lg text-muted-foreground font-medium max-w-2xl">
-                            <Flag emoji={yt.flag} size={22} /> {yt.name} ({yt.channel}) has <strong className="text-foreground">{yt.subscribers} subscribers</strong> and generates
+                            <span className="text-xl">{yt.flag}</span> {yt.name} ({yt.channel}) has <strong className="text-foreground">{yt.subscribers} subscribers</strong> and generates
                             an estimated <strong className="text-primary">{rev.fmtMonthly} per month</strong> from YouTube ad revenue alone.
                         </p>
                     </div>
@@ -329,7 +329,7 @@ export default async function YouTuberPage({ params }: { params: Promise<{ slug:
                                     return (
                                         <Link key={r.slug} href={`/blog/${r.slug}`} className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all group">
                                             <div className="flex items-center justify-between mb-2">
-                                                <p className="font-black group-hover:text-primary transition-colors"><Flag emoji={r.flag} size={16} /> {r.name}</p>
+                                                <p className="font-black group-hover:text-primary transition-colors"><span className="text-xl">{r.flag}</span> {r.name}</p>
                                                 <span className="text-xs font-black text-primary">#{r.rank}</span>
                                             </div>
                                             <p className="text-xs text-muted-foreground mb-2">{r.subscribers} subscribers · {r.niche}</p>

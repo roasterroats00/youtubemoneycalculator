@@ -209,7 +209,7 @@ export default function BlogIndex() {
                                     </span>
                                 </div>
                                 <h3 className="font-black text-lg mb-1 group-hover:text-primary transition-colors">
-                                    <Flag emoji={yt.flag} size={18} /> {yt.name}
+                                    <span className="text-xl">{yt.flag}</span> {yt.name}
                                 </h3>
                                 <p className="text-xs text-muted-foreground mb-3">{yt.subscribers} subscribers · {yt.monthlyViews} views/mo</p>
                                 <div className="flex items-center justify-between">

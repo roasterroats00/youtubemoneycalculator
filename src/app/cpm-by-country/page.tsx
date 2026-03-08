@@ -128,7 +128,7 @@ export default function CPMByCountryPage() {
                     </td>
                     <td className="py-5 px-8">
                       <Link href={`/cpm/${country.slug}`} className="flex items-center gap-3 font-black text-lg hover:text-primary transition-all">
-                        <span className="text-2xl">{country.flag}</span>
+                        <span className="text-xl">{country.flag}</span>
                         {country.name}
                         <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                       </Link>
