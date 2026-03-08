@@ -8,7 +8,8 @@ import { youtubers, getEstimatedRevenue } from "@/data/youtubers";
 import { countries } from "@/data/countries";
 import { niches } from "@/data/niches";
 import { subscriberTiers } from "@/data/subscriber-tiers";
-import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight, Target, Zap } from "lucide-react";
+import { comparisons } from "@/data/comparisons";
+import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight, Target, Zap, Handshake } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "YouTube Earnings Blog – Revenue Reports & Creator Income Analysis",
@@ -207,6 +208,32 @@ export default function BlogIndex() {
                                 >
                                     <span className="text-primary group-hover:scale-110 transition-transform"><TrendingUp className="h-3 w-3" /></span>
                                     {tier.label}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* YouTube Comparisons Section — [pSEO Theme 4] */}
+                <section className="mb-20">
+                    <div className="flex items-center gap-3 mb-8">
+                        <Handshake className="h-6 w-6 text-primary" />
+                        <h2 className="text-xl font-black uppercase tracking-widest">Creator Battles & Comparisons</h2>
+                    </div>
+                    <div className="p-8 rounded-[2.5rem] bg-muted/30 border border-border/50 relative overflow-hidden group">
+                        <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all" />
+                        <p className="text-sm text-muted-foreground font-medium mb-8 max-w-2xl leading-relaxed">
+                            Who earns more? We put the world's biggest YouTubers head-to-head in our <strong className="text-foreground">Revenue Battles</strong>. Compare stats, niche CPMs, and 2026 earnings.
+                        </p>
+                        <div className="flex flex-wrap gap-3">
+                            {comparisons.slice(0, 15).map((match) => (
+                                <Link
+                                    key={match.slug}
+                                    href={`/compare/${match.slug}`}
+                                    className="px-5 py-3 rounded-2xl bg-card border border-border/50 hover:border-primary/50 hover:shadow-lg transition-all text-sm font-black flex items-center gap-3 lowercase group/item"
+                                >
+                                    <span className="text-muted-foreground group-hover/item:text-primary transition-colors italic">vs</span>
+                                    {match.slug.replace(/-/g, " ").replace(" vs ", " — ")}
                                 </Link>
                             ))}
                         </div>

@@ -3,6 +3,7 @@ import { youtubers } from "@/data/youtubers";
 import { countries } from "@/data/countries";
 import { niches } from "@/data/niches";
 import { subscriberTiers } from "@/data/subscriber-tiers";
+import { comparisons } from "@/data/comparisons";
 
 const BASE_URL = "https://youtubemoneycalculator.net";
 
@@ -171,5 +172,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    return [...staticPages, ...pseoPages, ...countryPages, ...nichePages, ...subPages];
+    // pSEO comparison pages
+    const comparePages: MetadataRoute.Sitemap = comparisons.map((c) => ({
+        url: `${BASE_URL}/compare/${c.slug}`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+    }));
+
+    return [...staticPages, ...pseoPages, ...countryPages, ...nichePages, ...subPages, ...comparePages];
 }
