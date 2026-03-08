@@ -6,7 +6,8 @@ import { Schema, SchemaFactory } from "@/components/Schema";
 import { Flag } from "@/components/Flag";
 import { youtubers, getEstimatedRevenue } from "@/data/youtubers";
 import { countries } from "@/data/countries";
-import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight } from "lucide-react";
+import { niches } from "@/data/niches";
+import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight, Target } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "YouTube Earnings Blog – Revenue Reports & Creator Income Analysis",
@@ -128,7 +129,7 @@ export default function BlogIndex() {
                     </div>
                     <div className="p-8 rounded-[2.5rem] bg-muted/30 border border-border/50">
                         <p className="text-sm text-muted-foreground font-medium mb-8 max-w-2xl leading-relaxed">
-                            Explore localized YouTube earnings data for <strong className="text-foreground">60+ countries</strong>.
+                            Explore localized YouTube earnings data for <strong className="text-foreground">114 countries</strong>.
                             Our 2026 data-backed guides cover average CPM, RPM estimates, and top-paying niches for creators worldwide.
                         </p>
                         <div className="flex flex-wrap gap-3">
@@ -147,8 +148,41 @@ export default function BlogIndex() {
                                 href="/cpm-by-country"
                                 className="px-5 py-3 rounded-2xl bg-primary text-white font-black uppercase text-[10px] tracking-widest flex items-center gap-2 hover:bg-primary/90 transition-all shadow-lg"
                             >
-                                View All 60+ Countries <ArrowRight className="h-3 w-3" />
+                                View All 114 Countries <ArrowRight className="h-3 w-3" />
                             </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Earnings by Niche Section — [pSEO Theme 2] */}
+                <section className="mb-20">
+                    <div className="flex items-center gap-3 mb-8">
+                        <Target className="h-6 w-6 text-primary" />
+                        <h2 className="text-xl font-black uppercase tracking-widest">YouTube Earnings by Niche</h2>
+                    </div>
+                    <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-primary/5 to-transparent border border-primary/20">
+                        <p className="text-sm text-muted-foreground font-medium mb-8 max-w-2xl leading-relaxed">
+                            How much do YouTubers in specific niches make? Discover CPM and RPM benchmarks for <strong className="text-foreground">35+ content categories</strong>.
+                            Optimized for 2026 revenue projections.
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                            {niches.slice(0, 15).map((niche) => (
+                                <Link
+                                    key={niche.slug}
+                                    href={`/niche/${niche.slug}`}
+                                    className="p-4 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:-translate-y-1 transition-all flex flex-col items-center gap-3 group text-center"
+                                >
+                                    <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                        <TrendingUp className="h-5 w-5" />
+                                    </div>
+                                    <span className="font-bold text-xs text-foreground group-hover:text-primary transition-colors">{niche.name}</span>
+                                </Link>
+                            ))}
+                        </div>
+                        <div className="mt-8 pt-8 border-t border-border/30 flex justify-center">
+                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
+                                Scroll to see all niches or select a category above
+                            </p>
                         </div>
                     </div>
                 </section>

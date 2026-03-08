@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { youtubers } from "@/data/youtubers";
 import { countries } from "@/data/countries";
+import { niches } from "@/data/niches";
 
 const BASE_URL = "https://youtubemoneycalculator.net";
 
@@ -153,5 +154,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
     }));
 
-    return [...staticPages, ...pseoPages, ...countryPages];
+    // pSEO niche pages
+    const nichePages: MetadataRoute.Sitemap = niches.map((n) => ({
+        url: `${BASE_URL}/niche/${n.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+    }));
+
+    return [...staticPages, ...pseoPages, ...countryPages, ...nichePages];
 }
