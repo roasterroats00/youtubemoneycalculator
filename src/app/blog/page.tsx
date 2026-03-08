@@ -7,7 +7,8 @@ import { Flag } from "@/components/Flag";
 import { youtubers, getEstimatedRevenue } from "@/data/youtubers";
 import { countries } from "@/data/countries";
 import { niches } from "@/data/niches";
-import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight, Target } from "lucide-react";
+import { subscriberTiers } from "@/data/subscriber-tiers";
+import { TrendingUp, Search, DollarSign, Globe, ChevronRight, ArrowRight, Target, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "YouTube Earnings Blog – Revenue Reports & Creator Income Analysis",
@@ -183,6 +184,31 @@ export default function BlogIndex() {
                             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
                                 Scroll to see all niches or select a category above
                             </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Earnings by Subscriber Count Section — [pSEO Theme 3] */}
+                <section className="mb-20">
+                    <div className="flex items-center gap-3 mb-8">
+                        <Zap className="h-6 w-6 text-primary" />
+                        <h2 className="text-xl font-black uppercase tracking-widest">Earnings by Subscriber Milestone</h2>
+                    </div>
+                    <div className="p-8 rounded-[2.5rem] bg-muted/30 border border-border/50">
+                        <p className="text-sm text-muted-foreground font-medium mb-8 max-w-2xl leading-relaxed">
+                            How much does YouTube pay for different subscriber levels? Explore our <strong className="text-foreground">milestone-specific guides</strong> for 2026, from your first 100 to 100 million subscribers.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {subscriberTiers.map((tier) => (
+                                <Link
+                                    key={tier.slug}
+                                    href={`/earnings/${tier.slug}`}
+                                    className="px-4 py-2 rounded-xl bg-card border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all text-sm font-bold flex items-center gap-2 group"
+                                >
+                                    <span className="text-primary group-hover:scale-110 transition-transform"><TrendingUp className="h-3 w-3" /></span>
+                                    {tier.label}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </section>

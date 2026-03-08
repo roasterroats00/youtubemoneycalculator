@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { youtubers } from "@/data/youtubers";
 import { countries } from "@/data/countries";
 import { niches } from "@/data/niches";
+import { subscriberTiers } from "@/data/subscriber-tiers";
 
 const BASE_URL = "https://youtubemoneycalculator.net";
 
@@ -162,5 +163,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }));
 
-    return [...staticPages, ...pseoPages, ...countryPages, ...nichePages];
+    // pSEO subscriber tier pages
+    const subPages: MetadataRoute.Sitemap = subscriberTiers.map((t) => ({
+        url: `${BASE_URL}/earnings/${t.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+    }));
+
+    return [...staticPages, ...pseoPages, ...countryPages, ...nichePages, ...subPages];
 }

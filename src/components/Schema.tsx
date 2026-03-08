@@ -80,5 +80,18 @@ export const SchemaFactory = {
             "price": "0",
             "priceCurrency": "USD"
         }
+    }),
+
+    faq: (items: { q: string; a: string }[]) => ({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": items.map((item) => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.a
+            }
+        }))
     })
 };
