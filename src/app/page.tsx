@@ -140,8 +140,8 @@ export default function Home() {
 
         {/* How It Works Section */}
         <section className="max-w-[1180px] mx-auto px-4 md:px-0 py-24 md:py-32 space-y-16" id="how-to-use" aria-labelledby="how-it-works-heading">
-          <div className="text-center relative">
-            <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-primary/5 text-8xl font-black select-none pointer-events-none">
+          <div className="text-center relative overflow-hidden">
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-primary/5 text-8xl font-black select-none pointer-events-none whitespace-nowrap">
               WORKFLOW
             </div>
             <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
